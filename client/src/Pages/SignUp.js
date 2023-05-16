@@ -67,7 +67,7 @@ export default function SignUp(){
             password:password
           });
           
-          console.log(response.data); // 회원가입 성공 시 success 출력, 실패 시(중복 ID 또는 입력 데이터 유효성 검사 탈락) msg 출력
+          console.log(response.data); // 서버의 응답 출력
           // !!회원가입 성공 시 다음 페이지 어디로 갈지 작성 필요!!
         } catch (error) {
           console.error(error);
