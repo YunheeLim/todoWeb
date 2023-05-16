@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const session=require('express-session');
 
-
 const auth=require('../controller/auth.js');
 const db=require('../config/db.js');
 const sess=require('../controller/sessionChecker.js');
