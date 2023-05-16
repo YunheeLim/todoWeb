@@ -1,20 +1,24 @@
-import axios from "axios";
-import { useEffect } from "react";
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import First from './Pages/First';
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
 
 function App() {
-  const callApi=async()=>{
-    axios.get("/api").then((res)=>console.log(res.data.text));
-  };
+  // 서버로 데이터 요청하는 예시
+  // const callApi=async()=>{
+  //   axios.get("/api").then((res)=>console.log(res.data.text));
+  // };
 
-  useEffect(()=>{
-    callApi();
-  },[]);
+  // useEffect(()=>{
+  //   callApi();
+  // },[]);
 
   return (
-    <div className="App">
-    </div>
+    <Routes>
+      <Route path="/first" element={<First/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
+    </Routes>
   );
 }
 
