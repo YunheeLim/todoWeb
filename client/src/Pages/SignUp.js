@@ -31,6 +31,7 @@ export default function SignUp(){
         // 비밀번호: 8자 이상,20자 이내
         // 이에 맞지 않는 입력은 회원가입요청 결과로 '유효하지 않은 입력입니다'를 줌
 
+        //!! 유효성 검사 추가 필요!!
         if(e.target.usrId.value === "" || e.target.nickName.value === "" || e.target.email.value === "" || e.target.pw.value === ""){
             e.preventDefault();
         }

@@ -31,4 +31,24 @@ router.post('/signup', (req, res) => {
   })
 });
 
+// 로그인 요청 처리
+router.post('/api/login',(req,res)=>{
+  const id=req.body.id;
+  const pw=req.body.password;
+  db.query('SELECT * FROM User WHERE id=? AND password=?',[id,pw],(err,result)=>{
+    if(err){
+      throw err;
+    }
+    if(result.length!=0){ // SELECT의 결과값 있을 경우
+      console.log('user: ',id+' - login success');
+      req.session.isLogined=true;
+      req.session.userId=req.body.id;
+      res.redirect('main');
+    }else{
+      console.log('user: ',id+' - login fail');
+      res.render('login',{error:'존재하지 않는 ID 또는 PW 입니다.'});
+    }
+  })
+})
+
 module.exports = router;
