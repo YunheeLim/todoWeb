@@ -4,6 +4,7 @@
 A website for todo-list.<br/>
 You can manage things(todo-lists) you should do through many different kinds of functions.<br/>
 You can also journal simply and even communicate simply with your following/followers.
+![image](https://github.com/YunheeLim/todo_mate/assets/92131041/d4d74090-ab2c-408f-9f71-ab44e5300f05)
 
 ## Prerequisite
 ```shell
